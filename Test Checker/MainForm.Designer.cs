@@ -16,6 +16,7 @@
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             lblQuestion = new Label();
             rbChoice1 = new RadioButton();
             rbChoice2 = new RadioButton();
@@ -27,73 +28,97 @@
             // 
             // lblQuestion
             // 
-            lblQuestion.BorderStyle = BorderStyle.FixedSingle;
-            lblQuestion.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lblQuestion.Location = new Point(12, 9);
+            lblQuestion.AccessibleRole = AccessibleRole.None;
+            resources.ApplyResources(lblQuestion, "lblQuestion");
+            lblQuestion.BackColor = SystemColors.InfoText;
+            lblQuestion.BorderStyle = BorderStyle.Fixed3D;
+            lblQuestion.CausesValidation = false;
+            lblQuestion.ForeColor = SystemColors.Control;
+            lblQuestion.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Polite;
             lblQuestion.Name = "lblQuestion";
-            lblQuestion.Size = new Size(389, 152);
-            lblQuestion.TabIndex = 0;
+            lblQuestion.UseCompatibleTextRendering = true;
+            lblQuestion.UseMnemonic = false;
             // 
             // rbChoice1
             // 
-            rbChoice1.Location = new Point(12, 176);
+            rbChoice1.BackColor = SystemColors.InfoText;
+            resources.ApplyResources(rbChoice1, "rbChoice1");
+            rbChoice1.FlatAppearance.BorderColor = Color.White;
+            rbChoice1.FlatAppearance.BorderSize = 3;
+            rbChoice1.FlatAppearance.CheckedBackColor = Color.White;
+            rbChoice1.FlatAppearance.MouseDownBackColor = Color.White;
+            rbChoice1.FlatAppearance.MouseOverBackColor = Color.White;
+            rbChoice1.ForeColor = SystemColors.Window;
             rbChoice1.Name = "rbChoice1";
-            rbChoice1.Size = new Size(384, 50);
-            rbChoice1.TabIndex = 1;
-            rbChoice1.Text = "rbChoice1";
-            rbChoice1.UseVisualStyleBackColor = true;
-            rbChoice1.CheckedChanged += rbChoice1_CheckedChanged;
+            rbChoice1.UseCompatibleTextRendering = true;
+            rbChoice1.UseMnemonic = false;
+            rbChoice1.UseVisualStyleBackColor = false;
             // 
             // rbChoice2
             // 
-            rbChoice2.Location = new Point(12, 232);
+            rbChoice2.FlatAppearance.BorderColor = Color.White;
+            rbChoice2.FlatAppearance.BorderSize = 3;
+            rbChoice2.FlatAppearance.CheckedBackColor = Color.White;
+            rbChoice2.FlatAppearance.MouseDownBackColor = Color.White;
+            rbChoice2.FlatAppearance.MouseOverBackColor = Color.White;
+            resources.ApplyResources(rbChoice2, "rbChoice2");
+            rbChoice2.ForeColor = SystemColors.Window;
             rbChoice2.Name = "rbChoice2";
-            rbChoice2.Size = new Size(384, 50);
-            rbChoice2.TabIndex = 2;
-            rbChoice2.Text = "rbChoice2";
-            rbChoice2.UseVisualStyleBackColor = true;
+            rbChoice2.UseCompatibleTextRendering = true;
+            rbChoice2.UseMnemonic = false;
+            rbChoice2.UseVisualStyleBackColor = false;
             // 
             // rbChoice3
             // 
-            rbChoice3.Location = new Point(12, 288);
+            rbChoice3.FlatAppearance.BorderColor = Color.White;
+            rbChoice3.FlatAppearance.BorderSize = 3;
+            rbChoice3.FlatAppearance.CheckedBackColor = Color.White;
+            rbChoice3.FlatAppearance.MouseDownBackColor = Color.White;
+            rbChoice3.FlatAppearance.MouseOverBackColor = Color.White;
+            resources.ApplyResources(rbChoice3, "rbChoice3");
+            rbChoice3.ForeColor = SystemColors.Window;
             rbChoice3.Name = "rbChoice3";
-            rbChoice3.Size = new Size(384, 50);
-            rbChoice3.TabIndex = 3;
-            rbChoice3.Text = "rbChoice3";
-            rbChoice3.UseVisualStyleBackColor = true;
+            rbChoice3.UseCompatibleTextRendering = true;
+            rbChoice3.UseMnemonic = false;
+            rbChoice3.UseVisualStyleBackColor = false;
             // 
             // rbChoice4
             // 
-            rbChoice4.Location = new Point(12, 344);
+            rbChoice4.FlatAppearance.BorderColor = Color.White;
+            rbChoice4.FlatAppearance.BorderSize = 3;
+            rbChoice4.FlatAppearance.CheckedBackColor = Color.White;
+            rbChoice4.FlatAppearance.MouseDownBackColor = Color.White;
+            rbChoice4.FlatAppearance.MouseOverBackColor = Color.White;
+            resources.ApplyResources(rbChoice4, "rbChoice4");
+            rbChoice4.ForeColor = SystemColors.Window;
             rbChoice4.Name = "rbChoice4";
-            rbChoice4.Size = new Size(389, 50);
-            rbChoice4.TabIndex = 4;
-            rbChoice4.Text = "rbChoice4";
-            rbChoice4.UseVisualStyleBackColor = true;
+            rbChoice4.UseCompatibleTextRendering = true;
+            rbChoice4.UseMnemonic = false;
+            rbChoice4.UseVisualStyleBackColor = false;
             // 
             // btnNext
             // 
-            btnNext.Location = new Point(247, 410);
+            btnNext.FlatAppearance.BorderColor = Color.White;
+            resources.ApplyResources(btnNext, "btnNext");
+            btnNext.ForeColor = SystemColors.ControlLight;
             btnNext.Name = "btnNext";
-            btnNext.Size = new Size(75, 23);
-            btnNext.TabIndex = 5;
-            btnNext.Text = "Next";
+            btnNext.Tag = "";
             btnNext.UseVisualStyleBackColor = true;
             btnNext.Click += btnNext_Click;
             // 
             // lblTimer
             // 
-            lblTimer.Location = new Point(78, 414);
+            lblTimer.ForeColor = SystemColors.ControlLightLight;
+            resources.ApplyResources(lblTimer, "lblTimer");
             lblTimer.Name = "lblTimer";
-            lblTimer.Size = new Size(100, 23);
-            lblTimer.TabIndex = 6;
-            lblTimer.Text = "Timer: ";
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AcceptButton = btnNext;
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(408, 450);
+            BackColor = SystemColors.InfoText;
+            CausesValidation = false;
             Controls.Add(lblTimer);
             Controls.Add(btnNext);
             Controls.Add(rbChoice4);
@@ -101,8 +126,13 @@
             Controls.Add(rbChoice2);
             Controls.Add(rbChoice1);
             Controls.Add(lblQuestion);
+            ForeColor = SystemColors.ActiveCaptionText;
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            MaximizeBox = false;
             Name = "MainForm";
-            Text = "Test Checker";
+            Opacity = 0.9D;
+            ShowIcon = false;
+            SizeGripStyle = SizeGripStyle.Hide;
             ResumeLayout(false);
         }
 

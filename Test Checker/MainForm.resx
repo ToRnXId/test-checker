@@ -117,4 +117,257 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblQuestion.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblQuestion.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Consolas, 15.75pt</value>
+  </data>
+  <data name="lblQuestion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 9</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblQuestion.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblQuestion.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>425, 0</value>
+  </data>
+  <data name="lblQuestion.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>425, 0</value>
+  </data>
+  <data name="lblQuestion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>425, 194</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblQuestion.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblQuestion.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lblQuestion.Name" xml:space="preserve">
+    <value>lblQuestion</value>
+  </data>
+  <data name="&gt;&gt;lblQuestion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblQuestion.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblQuestion.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="rbChoice1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="rbChoice1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="rbChoice1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 207</value>
+  </data>
+  <data name="rbChoice1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="rbChoice1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>425, 63</value>
+  </data>
+  <data name="rbChoice1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="rbChoice1.Text" xml:space="preserve">
+    <value>rbChoice1</value>
+  </data>
+  <data name="&gt;&gt;rbChoice1.Name" xml:space="preserve">
+    <value>rbChoice1</value>
+  </data>
+  <data name="&gt;&gt;rbChoice1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rbChoice1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;rbChoice1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="rbChoice2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="rbChoice2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 278</value>
+  </data>
+  <data name="rbChoice2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="rbChoice2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>425, 63</value>
+  </data>
+  <data name="rbChoice2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="rbChoice2.Text" xml:space="preserve">
+    <value>rbChoice2</value>
+  </data>
+  <data name="&gt;&gt;rbChoice2.Name" xml:space="preserve">
+    <value>rbChoice2</value>
+  </data>
+  <data name="&gt;&gt;rbChoice2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rbChoice2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;rbChoice2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="rbChoice3.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="rbChoice3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 349</value>
+  </data>
+  <data name="rbChoice3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="rbChoice3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>425, 63</value>
+  </data>
+  <data name="rbChoice3.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="rbChoice3.Text" xml:space="preserve">
+    <value>rbChoice3</value>
+  </data>
+  <data name="&gt;&gt;rbChoice3.Name" xml:space="preserve">
+    <value>rbChoice3</value>
+  </data>
+  <data name="&gt;&gt;rbChoice3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rbChoice3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;rbChoice3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="rbChoice4.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="rbChoice4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 420</value>
+  </data>
+  <data name="rbChoice4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="rbChoice4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>425, 63</value>
+  </data>
+  <data name="rbChoice4.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="rbChoice4.Text" xml:space="preserve">
+    <value>rbChoice4</value>
+  </data>
+  <data name="&gt;&gt;rbChoice4.Name" xml:space="preserve">
+    <value>rbChoice4</value>
+  </data>
+  <data name="&gt;&gt;rbChoice4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rbChoice4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;rbChoice4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnNext.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnNext.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 501</value>
+  </data>
+  <data name="btnNext.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnNext.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 29</value>
+  </data>
+  <data name="btnNext.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btnNext.Text" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="&gt;&gt;btnNext.Name" xml:space="preserve">
+    <value>btnNext</value>
+  </data>
+  <data name="&gt;&gt;btnNext.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnNext.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnNext.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblTimer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>64, 506</value>
+  </data>
+  <data name="lblTimer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblTimer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 29</value>
+  </data>
+  <data name="lblTimer.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lblTimer.Text" xml:space="preserve">
+    <value>Time Left: </value>
+  </data>
+  <data name="&gt;&gt;lblTimer.Name" xml:space="preserve">
+    <value>lblTimer</value>
+  </data>
+  <data name="&gt;&gt;lblTimer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTimer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblTimer.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>9, 19</value>
+  </data>
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>445, 570</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Consolas, 12pt</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Test Checker</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

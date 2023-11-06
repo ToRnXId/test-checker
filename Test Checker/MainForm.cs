@@ -42,7 +42,6 @@ namespace Test_Checker
                         Text = lines[i],
                         Choices = lines.Skip(i + 1).Take(4).ToArray(),
                         CorrectAnswerIndex = int.Parse(lines[i + 5])
-
                     };
 
                     _questions.Add(question);
@@ -85,15 +84,10 @@ namespace Test_Checker
                 _timer.Stop();
                 MessageBox.Show("Time's up! Moving to the next question.");
                 _currentQuestionIndex++;
-                _timeLeft = 30;
+                _timeLeft = 60;
                 DisplayQuestion();
             }
             lblTimer.Text = $"Time Left: {_timeLeft} seconds";
-        }
-
-        private void rbChoice1_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -112,11 +106,11 @@ namespace Test_Checker
                 }
                 else
                 {
-                    MessageBox.Show($"Incorrect! The correct answer is: {question.Choices[question.CorrectAnswerIndex]}");
+                    MessageBox.Show($"Incorrect! The correct answer is: \n{question.Choices[question.CorrectAnswerIndex]}");
                 }
 
                 _currentQuestionIndex++;
-                _timeLeft = 30;
+                _timeLeft = 60;
                 DisplayQuestion();
             }
             else
