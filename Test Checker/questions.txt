@@ -1,0 +1,152 @@
+﻿Chose a right answer B:
+A
+B
+C
+D
+2
+Chose a right answer C:
+A
+B
+C
+D
+3
+W celu zmodyfikowania tekstu "ala ma psa" na "ALA MA PSA" należy użyć funkcji PHP
+A. strtoupper("ala ma psa")
+B. strstr("ala ma psa")
+C. strtolower("ala ma psa")
+D. ucfirst("ala ma psa")
+0
+W języku SQL wykorzystywanym przez bazę danych MySQL atrybut UNIQUE polecenia CREATE TABLE
+A. Jest stosowany, jeśli wartość w kolumnie nie mogą się powtarzać
+B. Blokuje możliwość wpisania wartości NULL
+C. Wymusza unikatowe nazwy pól tabeli
+D. Jest stosowany tylko w przypadku pól liczbowych
+0
+Aby wykonać kod zapisany językiem PHP wystarczy, że w systemie zainstalowano
+Nie udzielono odpowiedzi! Poprawna odpowiedź to: B
+A. serwer WWW, parser PHP oraz serwer MySQL
+B. serwer WWW z interpreterem PHP
+C. serwer WWW z serwerem MySQL
+D. przeglądarkę internetową
+1
+8. W celu stworzenia relacji wiele do wielu łączącej tabele A i B wystarczy, że
+Nie udzielono odpowiedzi! Poprawna odpowiedź to: B
+A. tabelę A połączy się z tabelą B poprzez zdefiniowanie kluczy obcych
+B. zdefiniuje się trzecią tabelę z kluczami obcymi do tabel A i B
+C. wiele rekordów z tabeli A zduplikuje się w tabeli B
+D. tabela A będzie zawierała te same pola co tabela B
+10. Testy aplikacji internetowej mające za zadanie sprawdzenie skalowalności aplikacji i bazy danych oraz architektury serwera i konfiguracji noszą nazwę testów
+Nie udzielono odpowiedzi! Poprawna odpowiedź to: C
+A. bezpieczeństwa
+B. użyteczności
+C. kompatybilności
+D. funkcjonalnych
+11. W języku JavaScript zdefiniowana zmienna i, która ma przechowywać wynik dzielenia wynoszący 1, to
+Nie udzielono odpowiedzi! Poprawna odpowiedź to: D
+A. var i=Number(3/2);
+B. var i=parseFloat(3/2);
+C. var i=3/2;
+D. var i=parseInt(3/2);
+12. W języku PHP zastosowano funkcję is_int(). Które z podanych wywołań tej funkcji zwróci wartość TRUE?
+Nie udzielono odpowiedzi! Poprawna odpowiedź to: C
+A. is_int(NULL)
+B. is_int("135")
+C. is_int(135)
+D. is_int(13.5)
+13. W języku HTML aby zdefiniować poziomą linię, należy użyć znacznika
+Nie udzielono odpowiedzi! Poprawna odpowiedź to: D
+A. <line>
+B. <br>
+C. <hl>
+D. <hr>
+15. Do określenia listy definicji w kodzie HTML używa się znacznika
+Nie udzielono odpowiedzi! Poprawna odpowiedź to: A
+A. <dl>
+B. <abbr>
+C. <label>
+D. <td>
+16. Które ze stwierdzeń dotyczących klucza podstawowego jest prawdziwe?
+Nie udzielono odpowiedzi! Poprawna odpowiedź to: A
+A. Jest unikalny w obrębie tabeli
+B. Dla tabeli z danymi osobowymi może być to pole nazwisko
+C. Może przyjmować tylko wartości liczbowe
+D. Składa się tylko z jednego pola
+17. W języku CSS wartości underline, overline, blink przyjmują atrybut
+Nie udzielono odpowiedzi! Poprawna odpowiedź to: D
+A. text-style
+B. font-weight
+C. font-style
+D. text-decoration
+21. Jak nazywa się metoda sortowania polegająca na podziale na n przedziałów jednakowej długości, w których następuje sortowanie, po czym posortowane zawartości przedziałów są poddawane analizie i prezentacji?
+Nie udzielono odpowiedzi! Poprawna odpowiedź to: C
+A. Sortowanie bąbelkowe.
+B. Sortowanie szybkie.
+C. Sortowanie kubełkowe.
+D. Sortowanie przez wybór.
+
+23. W języku PHP zmienna $_GET jest zmienną
+Nie udzielono odpowiedzi! Poprawna odpowiedź to: D
+A. zwykłą, zdefiniowaną przez twórcę strony
+B. predefiniowaną, używaną do gromadzenia wartości formularza po nagłówkach zlecenia HTTP (danych z formularza nie można zobaczyć w adresie)
+C. zdefiniowaną przez twórcę strony, służącą do przekazywania danych z formularza przez adres strony
+D. predefiniowaną, używaną do przekazywania danych do skryptów PHP poprzez adres strony
+26. Aby naprawić uszkodzoną tabelę w MySQL, należy wydać polecenie
+Nie udzielono odpowiedzi! Poprawna odpowiedź to: D
+A. FIX TABLE
+B. CHECK TABLE
+C. RESOLVE TABLE
+D. REPAIR TABLE
+27. Jakiego typu specjalizowane oprogramowanie narzędziowe należy zainstalować, aby umożliwić wykonywanie jego użytkownikowi operacji na zgromadzonych danych?
+Nie udzielono odpowiedzi! Poprawna odpowiedź to: D
+A. Otwarty mechanizm komunikacji bazy danych
+B. Klucz obcy
+C. Obiektowy System Zarządzania Bazą Danych
+D. System Zarządzania Bazą Danych (SZBD)
+28. Język PHP posiada obsługę
+Nie udzielono odpowiedzi! Poprawna odpowiedź to: A
+A. sesji i ciastek.
+B. obiektów przeglądarki.
+C. zdarzeń myszy.
+D. zdarzeń klawiatury.
+29. Oznaczenie barwy w postaci #ff00e0 jest równoważne zapisowi
+Nie udzielono odpowiedzi! Poprawna odpowiedź to: C
+A. rgb(ff,0,e0)
+B. rgb(f,0,e0)
+C. rgb(255,0,224)
+D. rgb(255,0,128)
+30. Aby w pliku z rozszerzeniem php umieścić kod w języku PHP należy użyć znaczników
+Nie udzielono odpowiedzi! Poprawna odpowiedź to: B
+A. <php> ......... </php>
+B. <?php .......... ?>
+C. <php .......... />
+D. <?php> ........ <php?>
+32. W poleceniach, których celem jest odtwarzanie na stronie internetowej dźwięku jako podkładu muzycznego NIE wykorzystuje się atrybutu
+Nie udzielono odpowiedzi! Poprawna odpowiedź to: D
+A. loop="10"
+B. volume="-100"
+C. balance="-10"
+D. href="C:/100.wav"
+34. Które stwierdzenie odnosi się do skalowania obrazu?
+Nie udzielono odpowiedzi! Poprawna odpowiedź to: A
+A. Powoduje zmianę rozmiaru obrazu bez zmieniania ważnej zawartości wizualnej
+B. Powoduje wycięcie z oryginalnego obrazu określonego jego fragmentu z celu uzyskania optymalnego widoku
+C. Polega na zmianie sposobu zapisu obrazu tak, aby zmienić sposób kompresji
+D. Łączy lub odejmuje kształty
+36. W języku SQL ustawienie klucza podstawowego na polu id w tabeli uczniowie możliwe jest za pomocą polecenia
+Nie udzielono odpowiedzi! Poprawna odpowiedź to: D
+A. INSERT TABLE uczniowie PRIMARY KEY (id);
+B. ADD TABLE uczniowie PRIMARY KEY (id);
+C. INSERT TABLE uczniowie ADD PRIMARY KEY (id);
+D. ALTER TABLE uczniowie ADD PRIMARY KEY (id);
+37. Zmienna typu integer lub int może przechowywać
+Nie udzielono odpowiedzi! Poprawna odpowiedź to: C
+A. ciąg znaków.
+B. znak.
+C. liczbę całkowitą.
+D. liczbę rzeczywistą.
+39. Do uruchomienia systemu CMS Joomla! wymagane jest środowisko:
+Nie udzielono odpowiedzi! Poprawna odpowiedź to: D
+A. IIS, PERL i MySQL
+B. Apache i PHP
+C. PHP i MySQL
+D. Apache, PHP i MySQL
