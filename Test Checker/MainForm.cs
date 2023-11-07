@@ -12,8 +12,9 @@ namespace Test_Checker
         private List<Question> _questions;
         private int _currentQuestionIndex = 0;
         private int _score = 0;
-        private Timer _timer = new Timer();
-        private int _timeLeft = 30;
+        private readonly Timer _timer = new Timer();
+        private int _timeLeft = 20;
+        private bool _answered;
 
         public MainForm()
         {
@@ -56,6 +57,8 @@ namespace Test_Checker
 
         private void DisplayQuestion()
         {
+            lblQuestionsQty.Text = $"Question: {_currentQuestionIndex + 1} / {_questions.Count + 1}";
+            
             if (_currentQuestionIndex < _questions.Count)
             {
                 Question question = _questions[_currentQuestionIndex];
@@ -71,7 +74,8 @@ namespace Test_Checker
             else
             {
                 _timer.Stop();
-                MessageBox.Show($"Test completed! Your score: {_questions.Count}");
+                lblInfo.Text = $"Test completed! Your score: {_score}";
+                //MessageBox.Show($"Test completed! Your score: {_questions.Count}");
                 Environment.Exit(0);
             }
         }
@@ -79,34 +83,35 @@ namespace Test_Checker
         private void Timer_Tick(object sender, EventArgs e)
         {
             _timeLeft--;
-            if (_timeLeft <= 0)
+            if (_timeLeft == 0)
             {
                 _timer.Stop();
-                MessageBox.Show("Time's up! Moving to the next question.");
+                lblInfo.Text = "Time's up! Moving to the next question.";
                 _currentQuestionIndex++;
-                _timeLeft = 60;
-                DisplayQuestion();
             }
-            lblTimer.Text = $"Time Left: {_timeLeft} seconds";
+            lblTimer.Text = $"Time Left: {_timeLeft}";
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            _timer.Stop();
+            
+            lblQuestionsQty.Text = $"Question: {_currentQuestionIndex + 1} / {_questions.Count + 1}";
             int selectedAnswerIndex = GetSelectedAnswerIndex();
 
             if (selectedAnswerIndex != -1)
             {
+                _timer.Stop();
                 Question question = _questions[_currentQuestionIndex];
+                question.IsAnswered = true;
 
-                if (question.IsAnswerCorrect(selectedAnswerIndex))
+                if (question.IsAnswerCorrect(selectedAnswerIndex) && question.IsAnswered)
                 {
-                    MessageBox.Show("Correct!");
                     _score++;
+                    lblScore.Text = $"Score: {_score}";
                 }
                 else
                 {
-                    MessageBox.Show($"Incorrect! The correct answer is: \n{question.Choices[question.CorrectAnswerIndex]}");
+                    lblInfo.Text = $"Incorrect! The correct answer is: \n{question.Choices[question.CorrectAnswerIndex]}";
                 }
 
                 _currentQuestionIndex++;
@@ -115,7 +120,8 @@ namespace Test_Checker
             }
             else
             {
-                MessageBox.Show("Please select answer before moving to the next question.");
+                //MessageBox.Show("Please select answer before moving to the next question.");
+                lblInfo.Text = "Please select answer before moving to the next question.";
             }
         }
 
@@ -127,6 +133,51 @@ namespace Test_Checker
             if (rbChoice4.Checked) return 3;
             return -1;
         }
+
+        private void btnCheck_Click(object sender, EventArgs e)
+        {
+            lblQuestionsQty.Text = $"Question: {_currentQuestionIndex + 1} / {_questions.Count + 1}";
+
+            int selectedAnswerIndex = GetSelectedAnswerIndex();
+
+            if (selectedAnswerIndex != -1)
+            {
+                Question question = _questions[_currentQuestionIndex];
+                _timer.Stop();
+
+                if (question.IsAnswerCorrect(selectedAnswerIndex))
+                {
+                    _score++;
+                    lblScore.Text = $"Score: {_score}";
+                    lblInfo.Text = "Correct!";
+                }
+                else
+                {
+                    //MessageBox.Show($"Incorrect! The correct answer is: \n{question.Choices[question.CorrectAnswerIndex]}");
+                    lblInfo.Text = $"Incorrect! The correct answer is: \n{question.Choices[question.CorrectAnswerIndex]}";
+                }
+                _timeLeft = 60;
+            }
+            else
+            {
+                //MessageBox.Show("Please select answer before moving to the next question.");
+                lblInfo.Text = "Please select answer.";
+            }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            if (_currentQuestionIndex > 0)
+            {
+                _currentQuestionIndex--;
+            }
+            //rbChoice1.Enabled = false;
+            //rbChoice2.Enabled = false;
+            //rbChoice3.Enabled = false;
+            //rbChoice4.Enabled = false;
+            lblQuestionsQty.Text = $"Question: {_currentQuestionIndex + 1} / {_questions.Count + 1}";
+            DisplayQuestion();
+        }
     }
 
     public class Question
@@ -134,6 +185,7 @@ namespace Test_Checker
         public string Text { get; set; }
         public string[] Choices { get; set; }
         public int CorrectAnswerIndex { get; set; }
+        public bool IsAnswered {  get; set; }
 
         public bool IsAnswerCorrect(int selectedAnswerIndex)
         {

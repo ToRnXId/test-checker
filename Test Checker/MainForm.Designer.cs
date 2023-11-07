@@ -24,6 +24,11 @@
             rbChoice4 = new RadioButton();
             btnNext = new Button();
             lblTimer = new Label();
+            lblScore = new Label();
+            btnCheck = new Button();
+            lblInfo = new Label();
+            lblQuestionsQty = new Label();
+            btnBack = new Button();
             SuspendLayout();
             // 
             // lblQuestion
@@ -33,7 +38,7 @@
             lblQuestion.BackColor = SystemColors.InfoText;
             lblQuestion.BorderStyle = BorderStyle.Fixed3D;
             lblQuestion.CausesValidation = false;
-            lblQuestion.ForeColor = SystemColors.Control;
+            lblQuestion.ForeColor = SystemColors.ControlLightLight;
             lblQuestion.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Polite;
             lblQuestion.Name = "lblQuestion";
             lblQuestion.UseCompatibleTextRendering = true;
@@ -48,7 +53,7 @@
             rbChoice1.FlatAppearance.CheckedBackColor = Color.White;
             rbChoice1.FlatAppearance.MouseDownBackColor = Color.White;
             rbChoice1.FlatAppearance.MouseOverBackColor = Color.White;
-            rbChoice1.ForeColor = SystemColors.Window;
+            rbChoice1.ForeColor = SystemColors.ControlLightLight;
             rbChoice1.Name = "rbChoice1";
             rbChoice1.UseCompatibleTextRendering = true;
             rbChoice1.UseMnemonic = false;
@@ -62,7 +67,7 @@
             rbChoice2.FlatAppearance.MouseDownBackColor = Color.White;
             rbChoice2.FlatAppearance.MouseOverBackColor = Color.White;
             resources.ApplyResources(rbChoice2, "rbChoice2");
-            rbChoice2.ForeColor = SystemColors.Window;
+            rbChoice2.ForeColor = SystemColors.ControlLightLight;
             rbChoice2.Name = "rbChoice2";
             rbChoice2.UseCompatibleTextRendering = true;
             rbChoice2.UseMnemonic = false;
@@ -76,7 +81,7 @@
             rbChoice3.FlatAppearance.MouseDownBackColor = Color.White;
             rbChoice3.FlatAppearance.MouseOverBackColor = Color.White;
             resources.ApplyResources(rbChoice3, "rbChoice3");
-            rbChoice3.ForeColor = SystemColors.Window;
+            rbChoice3.ForeColor = SystemColors.ControlLightLight;
             rbChoice3.Name = "rbChoice3";
             rbChoice3.UseCompatibleTextRendering = true;
             rbChoice3.UseMnemonic = false;
@@ -90,7 +95,7 @@
             rbChoice4.FlatAppearance.MouseDownBackColor = Color.White;
             rbChoice4.FlatAppearance.MouseOverBackColor = Color.White;
             resources.ApplyResources(rbChoice4, "rbChoice4");
-            rbChoice4.ForeColor = SystemColors.Window;
+            rbChoice4.ForeColor = SystemColors.ControlLightLight;
             rbChoice4.Name = "rbChoice4";
             rbChoice4.UseCompatibleTextRendering = true;
             rbChoice4.UseMnemonic = false;
@@ -100,7 +105,7 @@
             // 
             btnNext.FlatAppearance.BorderColor = Color.White;
             resources.ApplyResources(btnNext, "btnNext");
-            btnNext.ForeColor = SystemColors.ControlLight;
+            btnNext.ForeColor = SystemColors.ActiveCaption;
             btnNext.Name = "btnNext";
             btnNext.Tag = "";
             btnNext.UseVisualStyleBackColor = true;
@@ -108,9 +113,51 @@
             // 
             // lblTimer
             // 
-            lblTimer.ForeColor = SystemColors.ControlLightLight;
+            lblTimer.ForeColor = SystemColors.ActiveCaption;
             resources.ApplyResources(lblTimer, "lblTimer");
             lblTimer.Name = "lblTimer";
+            // 
+            // lblScore
+            // 
+            lblScore.ForeColor = SystemColors.ActiveCaption;
+            resources.ApplyResources(lblScore, "lblScore");
+            lblScore.Name = "lblScore";
+            // 
+            // btnCheck
+            // 
+            btnCheck.DialogResult = DialogResult.Cancel;
+            btnCheck.FlatAppearance.BorderColor = Color.White;
+            resources.ApplyResources(btnCheck, "btnCheck");
+            btnCheck.ForeColor = SystemColors.ActiveCaption;
+            btnCheck.Name = "btnCheck";
+            btnCheck.Tag = "";
+            btnCheck.UseVisualStyleBackColor = true;
+            btnCheck.Click += btnCheck_Click;
+            // 
+            // lblInfo
+            // 
+            lblInfo.BorderStyle = BorderStyle.Fixed3D;
+            lblInfo.FlatStyle = FlatStyle.Popup;
+            lblInfo.ForeColor = SystemColors.ActiveCaption;
+            resources.ApplyResources(lblInfo, "lblInfo");
+            lblInfo.Name = "lblInfo";
+            lblInfo.UseCompatibleTextRendering = true;
+            // 
+            // lblQuestionsQty
+            // 
+            lblQuestionsQty.ForeColor = SystemColors.ActiveCaption;
+            resources.ApplyResources(lblQuestionsQty, "lblQuestionsQty");
+            lblQuestionsQty.Name = "lblQuestionsQty";
+            // 
+            // btnBack
+            // 
+            btnBack.FlatAppearance.BorderColor = Color.White;
+            resources.ApplyResources(btnBack, "btnBack");
+            btnBack.ForeColor = SystemColors.ActiveCaption;
+            btnBack.Name = "btnBack";
+            btnBack.Tag = "";
+            btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
             // 
             // MainForm
             // 
@@ -119,6 +166,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.InfoText;
             CausesValidation = false;
+            Controls.Add(btnBack);
+            Controls.Add(lblQuestionsQty);
+            Controls.Add(lblInfo);
+            Controls.Add(btnCheck);
+            Controls.Add(lblScore);
             Controls.Add(lblTimer);
             Controls.Add(btnNext);
             Controls.Add(rbChoice4);
@@ -145,5 +197,10 @@
         private RadioButton rbChoice4;
         private Button btnNext;
         private Label lblTimer;
+        private Label lblScore;
+        private Button btnCheck;
+        private Label lblInfo;
+        private Label lblQuestionsQty;
+        private Button btnBack;
     }
 }

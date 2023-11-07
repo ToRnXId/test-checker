@@ -126,7 +126,7 @@
     <value>Consolas, 15.75pt</value>
   </data>
   <data name="lblQuestion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 9</value>
+    <value>7, 38</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lblQuestion.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
@@ -158,7 +158,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblQuestion.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>11</value>
   </data>
   <data name="rbChoice1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
@@ -167,7 +167,7 @@
     <value>Popup</value>
   </data>
   <data name="rbChoice1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 207</value>
+    <value>7, 236</value>
   </data>
   <data name="rbChoice1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -191,13 +191,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;rbChoice1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>10</value>
   </data>
   <data name="rbChoice2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
   </data>
   <data name="rbChoice2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 278</value>
+    <value>7, 307</value>
   </data>
   <data name="rbChoice2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -221,13 +221,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;rbChoice2.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>9</value>
   </data>
   <data name="rbChoice3.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
   </data>
   <data name="rbChoice3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 349</value>
+    <value>7, 378</value>
   </data>
   <data name="rbChoice3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -251,13 +251,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;rbChoice3.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>8</value>
   </data>
   <data name="rbChoice4.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
   </data>
   <data name="rbChoice4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 420</value>
+    <value>7, 449</value>
   </data>
   <data name="rbChoice4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -281,13 +281,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;rbChoice4.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>7</value>
   </data>
   <data name="btnNext.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
   </data>
   <data name="btnNext.Location" type="System.Drawing.Point, System.Drawing">
-    <value>227, 501</value>
+    <value>285, 520</value>
   </data>
   <data name="btnNext.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -311,16 +311,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnNext.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>6</value>
   </data>
   <data name="lblTimer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>64, 506</value>
+    <value>7, 9</value>
   </data>
   <data name="lblTimer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
   </data>
   <data name="lblTimer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 29</value>
+    <value>131, 29</value>
   </data>
   <data name="lblTimer.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -338,6 +338,156 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblTimer.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblScore.Location" type="System.Drawing.Point, System.Drawing">
+    <value>145, 9</value>
+  </data>
+  <data name="lblScore.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 29</value>
+  </data>
+  <data name="lblScore.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lblScore.Text" xml:space="preserve">
+    <value>Score: 0</value>
+  </data>
+  <data name="&gt;&gt;lblScore.Name" xml:space="preserve">
+    <value>lblScore</value>
+  </data>
+  <data name="&gt;&gt;lblScore.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblScore.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblScore.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnCheck.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnCheck.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnCheck.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 520</value>
+  </data>
+  <data name="btnCheck.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnCheck.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 29</value>
+  </data>
+  <data name="btnCheck.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="btnCheck.Text" xml:space="preserve">
+    <value>Check</value>
+  </data>
+  <data name="&gt;&gt;btnCheck.Name" xml:space="preserve">
+    <value>btnCheck</value>
+  </data>
+  <data name="&gt;&gt;btnCheck.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCheck.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnCheck.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblInfo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 565</value>
+  </data>
+  <data name="lblInfo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblInfo.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>430, 0</value>
+  </data>
+  <data name="lblInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>425, 79</value>
+  </data>
+  <data name="lblInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="lblInfo.Text" xml:space="preserve">
+    <value>Information: </value>
+  </data>
+  <data name="&gt;&gt;lblInfo.Name" xml:space="preserve">
+    <value>lblInfo</value>
+  </data>
+  <data name="&gt;&gt;lblInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblInfo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblInfo.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblQuestionsQty.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblQuestionsQty.Location" type="System.Drawing.Point, System.Drawing">
+    <value>254, 9</value>
+  </data>
+  <data name="lblQuestionsQty.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 29</value>
+  </data>
+  <data name="lblQuestionsQty.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="lblQuestionsQty.Text" xml:space="preserve">
+    <value>Question: 0 / 0</value>
+  </data>
+  <data name="&gt;&gt;lblQuestionsQty.Name" xml:space="preserve">
+    <value>lblQuestionsQty</value>
+  </data>
+  <data name="&gt;&gt;lblQuestionsQty.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblQuestionsQty.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblQuestionsQty.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnBack.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnBack.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnBack.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 520</value>
+  </data>
+  <data name="btnBack.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnBack.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 29</value>
+  </data>
+  <data name="btnBack.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="btnBack.Text" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="&gt;&gt;btnBack.Name" xml:space="preserve">
+    <value>btnBack</value>
+  </data>
+  <data name="&gt;&gt;btnBack.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnBack.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnBack.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -350,7 +500,7 @@
     <value>Center</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>445, 570</value>
+    <value>445, 653</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Consolas, 12pt</value>
