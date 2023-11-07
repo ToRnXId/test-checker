@@ -287,7 +287,7 @@
     <value>Popup</value>
   </data>
   <data name="btnNext.Location" type="System.Drawing.Point, System.Drawing">
-    <value>285, 520</value>
+    <value>295, 520</value>
   </data>
   <data name="btnNext.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -371,7 +371,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnCheck.Location" type="System.Drawing.Point, System.Drawing">
-    <value>149, 520</value>
+    <value>159, 520</value>
   </data>
   <data name="btnCheck.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -414,9 +414,6 @@
   </data>
   <data name="lblInfo.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
-  </data>
-  <data name="lblInfo.Text" xml:space="preserve">
-    <value>Information: </value>
   </data>
   <data name="&gt;&gt;lblInfo.Name" xml:space="preserve">
     <value>lblInfo</value>
@@ -464,7 +461,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnBack.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 520</value>
+    <value>23, 520</value>
   </data>
   <data name="btnBack.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>

@@ -49,7 +49,6 @@
             rbChoice1.BackColor = SystemColors.InfoText;
             resources.ApplyResources(rbChoice1, "rbChoice1");
             rbChoice1.FlatAppearance.BorderColor = Color.White;
-            rbChoice1.FlatAppearance.BorderSize = 3;
             rbChoice1.FlatAppearance.CheckedBackColor = Color.White;
             rbChoice1.FlatAppearance.MouseDownBackColor = Color.White;
             rbChoice1.FlatAppearance.MouseOverBackColor = Color.White;
@@ -57,7 +56,7 @@
             rbChoice1.Name = "rbChoice1";
             rbChoice1.UseCompatibleTextRendering = true;
             rbChoice1.UseMnemonic = false;
-            rbChoice1.UseVisualStyleBackColor = false;
+            rbChoice1.UseVisualStyleBackColor = true;
             // 
             // rbChoice2
             // 
@@ -191,10 +190,6 @@
         #endregion
 
         private Label lblQuestion;
-        private RadioButton rbChoice1;
-        private RadioButton rbChoice2;
-        private RadioButton rbChoice3;
-        private RadioButton rbChoice4;
         private Button btnNext;
         private Label lblTimer;
         private Label lblScore;
@@ -202,5 +197,9 @@
         private Label lblInfo;
         private Label lblQuestionsQty;
         private Button btnBack;
+        public RadioButton rbChoice1;
+        public RadioButton rbChoice2;
+        public RadioButton rbChoice3;
+        public RadioButton rbChoice4;
     }
 }

@@ -14,7 +14,7 @@ namespace Test_Checker
         private int _score = 0;
         private readonly Timer _timer = new Timer();
         private int _timeLeft = 20;
-        private bool _answered;
+        static int answersCount;
 
         public MainForm()
         {
@@ -22,6 +22,7 @@ namespace Test_Checker
 
             LoadQuestionsFromFile("questions.txt");
 
+            btnBack.Enabled = false;
             _timer.Interval = 1000;
             _timer.Tick += Timer_Tick;
 
@@ -58,7 +59,7 @@ namespace Test_Checker
         private void DisplayQuestion()
         {
             lblQuestionsQty.Text = $"Question: {_currentQuestionIndex + 1} / {_questions.Count + 1}";
-            
+
             if (_currentQuestionIndex < _questions.Count)
             {
                 Question question = _questions[_currentQuestionIndex];
@@ -74,9 +75,8 @@ namespace Test_Checker
             else
             {
                 _timer.Stop();
-                lblInfo.Text = $"Test completed! Your score: {_score}";
-                //MessageBox.Show($"Test completed! Your score: {_questions.Count}");
-                Environment.Exit(0);
+                btnCheck.Enabled = false;
+                lblInfo.Text += $"\nTest completed! Your score: {_score}";
             }
         }
 
@@ -87,41 +87,47 @@ namespace Test_Checker
             {
                 _timer.Stop();
                 lblInfo.Text = "Time's up! Moving to the next question.";
-                _currentQuestionIndex++;
+                AnswersDisable();
             }
             lblTimer.Text = $"Time Left: {_timeLeft}";
         }
 
+        private void AnswersEnable()
+        {
+            rbChoice1.Enabled = true;
+            rbChoice2.Enabled = true;
+            rbChoice3.Enabled = true;
+            rbChoice4.Enabled = true;
+            btnCheck.Enabled = true;
+        }
+
+        private void AnswersDisable()
+        {
+            rbChoice1.Enabled = false;
+            rbChoice2.Enabled = false;
+            rbChoice3.Enabled = false;
+            rbChoice4.Enabled = false;
+            btnCheck.Enabled = false;
+        }
+
         private void btnNext_Click(object sender, EventArgs e)
         {
-            
-            lblQuestionsQty.Text = $"Question: {_currentQuestionIndex + 1} / {_questions.Count + 1}";
-            int selectedAnswerIndex = GetSelectedAnswerIndex();
-
-            if (selectedAnswerIndex != -1)
+            if (btnCheck.Enabled == false)
             {
-                _timer.Stop();
-                Question question = _questions[_currentQuestionIndex];
-                question.IsAnswered = true;
-
-                if (question.IsAnswerCorrect(selectedAnswerIndex) && question.IsAnswered)
+                if (answersCount == _currentQuestionIndex + 1)
                 {
-                    _score++;
-                    lblScore.Text = $"Score: {_score}";
+                    AnswersEnable();
                 }
-                else
-                {
-                    lblInfo.Text = $"Incorrect! The correct answer is: \n{question.Choices[question.CorrectAnswerIndex]}";
-                }
-
-                _currentQuestionIndex++;
+                btnBack.Enabled = true;
                 _timeLeft = 60;
+                lblInfo.Text = "";
+                
+                _currentQuestionIndex++;
                 DisplayQuestion();
             }
             else
             {
-                //MessageBox.Show("Please select answer before moving to the next question.");
-                lblInfo.Text = "Please select answer before moving to the next question.";
+                lblInfo.Text = "Please check answer before moving next question...";
             }
         }
 
@@ -144,6 +150,8 @@ namespace Test_Checker
             {
                 Question question = _questions[_currentQuestionIndex];
                 _timer.Stop();
+                AnswersDisable();
+                answersCount++;
 
                 if (question.IsAnswerCorrect(selectedAnswerIndex))
                 {
@@ -153,30 +161,30 @@ namespace Test_Checker
                 }
                 else
                 {
-                    //MessageBox.Show($"Incorrect! The correct answer is: \n{question.Choices[question.CorrectAnswerIndex]}");
-                    lblInfo.Text = $"Incorrect! The correct answer is: \n{question.Choices[question.CorrectAnswerIndex]}";
+                    lblInfo.Text = $"Incorrect! The correct answer is: \n" +
+                        $"{question.Choices[question.CorrectAnswerIndex]}";
                 }
                 _timeLeft = 60;
             }
             else
             {
-                //MessageBox.Show("Please select answer before moving to the next question.");
-                lblInfo.Text = "Please select answer.";
+                lblInfo.Text = "Please select answer...";
             }
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            if (_currentQuestionIndex > 0)
+            if (_currentQuestionIndex <= 0)
+            {
+                _currentQuestionIndex = 0;
+                btnBack.Enabled = false;
+            }
+            else
             {
                 _currentQuestionIndex--;
+                DisplayQuestion();
+                AnswersDisable();
             }
-            //rbChoice1.Enabled = false;
-            //rbChoice2.Enabled = false;
-            //rbChoice3.Enabled = false;
-            //rbChoice4.Enabled = false;
-            lblQuestionsQty.Text = $"Question: {_currentQuestionIndex + 1} / {_questions.Count + 1}";
-            DisplayQuestion();
         }
     }
 
@@ -185,11 +193,15 @@ namespace Test_Checker
         public string Text { get; set; }
         public string[] Choices { get; set; }
         public int CorrectAnswerIndex { get; set; }
-        public bool IsAnswered {  get; set; }
 
         public bool IsAnswerCorrect(int selectedAnswerIndex)
         {
             return selectedAnswerIndex == CorrectAnswerIndex;
+        }
+
+        public bool IsAnswered()
+        {
+            return true;
         }
     }
 }
