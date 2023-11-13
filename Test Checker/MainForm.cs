@@ -9,12 +9,11 @@ namespace Test_Checker
 {
     public partial class MainForm : Form
     {
-        private List<Question> _questions;
+        private List<Question> ?_questions;
         private int _currentQuestionIndex = 0;
         private int _score = 0;
         private readonly Timer _timer = new Timer();
         private int _timeLeft = 20;
-        static int answersCount;
 
         public MainForm()
         {
@@ -58,9 +57,9 @@ namespace Test_Checker
 
         private void DisplayQuestion()
         {
-            lblQuestionsQty.Text = $"Question: {_currentQuestionIndex + 1} / {_questions.Count + 1}";
+            lblQuestionsQty.Text = $"Question: {_currentQuestionIndex + 1} / {_questions?.Count}";
 
-            if (_currentQuestionIndex < _questions.Count)
+            if (_currentQuestionIndex < _questions?.Count)
             {
                 Question question = _questions[_currentQuestionIndex];
 
@@ -69,13 +68,16 @@ namespace Test_Checker
                 rbChoice2.Text = question.Choices[1];
                 rbChoice3.Text = question.Choices[2];
                 rbChoice4.Text = question.Choices[3];
-
+                btnCheck.Enabled = true;
+                AnswersEnable();
                 _timer.Start();
             }
             else
             {
                 _timer.Stop();
                 btnCheck.Enabled = false;
+                btnNext.Enabled = false;
+                lblQuestionsQty.Text = $"Question: {_currentQuestionIndex} / {_questions?.Count}";
                 lblInfo.Text += $"\nTest completed! Your score: {_score}";
             }
         }
@@ -114,14 +116,8 @@ namespace Test_Checker
         {
             if (btnCheck.Enabled == false)
             {
-                if (answersCount == _currentQuestionIndex + 1)
-                {
-                    AnswersEnable();
-                }
-                btnBack.Enabled = true;
                 _timeLeft = 60;
                 lblInfo.Text = "";
-                
                 _currentQuestionIndex++;
                 DisplayQuestion();
             }
@@ -142,7 +138,7 @@ namespace Test_Checker
 
         private void btnCheck_Click(object sender, EventArgs e)
         {
-            lblQuestionsQty.Text = $"Question: {_currentQuestionIndex + 1} / {_questions.Count + 1}";
+            lblQuestionsQty.Text = $"Question: {_currentQuestionIndex + 1} / {_questions?.Count}";
 
             int selectedAnswerIndex = GetSelectedAnswerIndex();
 
@@ -151,7 +147,6 @@ namespace Test_Checker
                 Question question = _questions[_currentQuestionIndex];
                 _timer.Stop();
                 AnswersDisable();
-                answersCount++;
 
                 if (question.IsAnswerCorrect(selectedAnswerIndex))
                 {
@@ -174,17 +169,7 @@ namespace Test_Checker
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            if (_currentQuestionIndex <= 0)
-            {
-                _currentQuestionIndex = 0;
-                btnBack.Enabled = false;
-            }
-            else
-            {
-                _currentQuestionIndex--;
-                DisplayQuestion();
-                AnswersDisable();
-            }
+            
         }
     }
 
@@ -197,11 +182,6 @@ namespace Test_Checker
         public bool IsAnswerCorrect(int selectedAnswerIndex)
         {
             return selectedAnswerIndex == CorrectAnswerIndex;
-        }
-
-        public bool IsAnswered()
-        {
-            return true;
         }
     }
 }
