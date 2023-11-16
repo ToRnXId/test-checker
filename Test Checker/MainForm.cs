@@ -69,7 +69,7 @@ namespace Test_Checker
                 rbChoice3.Text = question.Choices[2];
                 rbChoice4.Text = question.Choices[3];
                 btnCheck.Enabled = true;
-                AnswersEnable();
+                AnswersEnable(true);
                 _timer.Start();
             }
             else
@@ -88,28 +88,31 @@ namespace Test_Checker
             if (_timeLeft == 0)
             {
                 _timer.Stop();
-                lblInfo.Text = "Time's up! Moving to the next question.";
-                AnswersDisable();
+                lblInfo.Text = "Time's up! Moving to the next question. ";
+                    //$"The correct answer is: {question.Choices[question.CorrectAnswerIndex]}";
+                AnswersEnable(false);
             }
             lblTimer.Text = $"Time Left: {_timeLeft}";
         }
 
-        private void AnswersEnable()
+        private void AnswersEnable(bool enable)
         {
-            rbChoice1.Enabled = true;
-            rbChoice2.Enabled = true;
-            rbChoice3.Enabled = true;
-            rbChoice4.Enabled = true;
-            btnCheck.Enabled = true;
-        }
-
-        private void AnswersDisable()
-        {
-            rbChoice1.Enabled = false;
-            rbChoice2.Enabled = false;
-            rbChoice3.Enabled = false;
-            rbChoice4.Enabled = false;
-            btnCheck.Enabled = false;
+            if (enable)
+            {
+                rbChoice1.Enabled = true;
+                rbChoice2.Enabled = true;
+                rbChoice3.Enabled = true;
+                rbChoice4.Enabled = true;
+                btnCheck.Enabled = true;
+            }
+            else
+            {
+                rbChoice1.Enabled = false;
+                rbChoice2.Enabled = false;
+                rbChoice3.Enabled = false;
+                rbChoice4.Enabled = false;
+                btnCheck.Enabled = false;
+            }
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -146,7 +149,7 @@ namespace Test_Checker
             {
                 Question question = _questions[_currentQuestionIndex];
                 _timer.Stop();
-                AnswersDisable();
+                AnswersEnable(false);
 
                 if (question.IsAnswerCorrect(selectedAnswerIndex))
                 {
