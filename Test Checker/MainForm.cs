@@ -1,19 +1,14 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Windows.Forms;
 using Timer = System.Windows.Forms.Timer;
 
 namespace Test_Checker
 {
     public partial class MainForm : Form
     {
-        private List<Question> ?_questions;
-        private int _currentQuestionIndex = 0;
-        private int _score = 0;
-        private readonly Timer _timer = new Timer();
-        private int _timeLeft = 20;
+        private List<Question>? questionsList;
+        private int currentQuestionIndex = 0;
+        private int score = 0;
+        private readonly Timer timer = new Timer();
+        private int timeLeft = 61;
 
         public MainForm()
         {
@@ -22,15 +17,15 @@ namespace Test_Checker
             LoadQuestionsFromFile("questions.txt");
 
             btnBack.Enabled = false;
-            _timer.Interval = 1000;
-            _timer.Tick += Timer_Tick;
+            timer.Interval = 1000;
+            timer.Tick += Timer_Tick;
 
             DisplayQuestion();
         }
 
         private void LoadQuestionsFromFile(string filename)
         {
-            _questions = new List<Question>();
+            questionsList = new List<Question>();
 
             try
             {
@@ -45,7 +40,7 @@ namespace Test_Checker
                         CorrectAnswerIndex = int.Parse(lines[i + 5])
                     };
 
-                    _questions.Add(question);
+                    questionsList.Add(question);
                 }
             }
             catch (Exception ex)
@@ -55,73 +50,77 @@ namespace Test_Checker
             }
         }
 
+        private void UpdateQuestionsCountLabel()
+        {
+            lblQuestionsQty.Text = $"Question: {currentQuestionIndex + 1} / {questionsList?.Count}";
+        }
+
         private void DisplayQuestion()
         {
-            lblQuestionsQty.Text = $"Question: {_currentQuestionIndex + 1} / {_questions?.Count}";
+            UpdateQuestionsCountLabel();
 
-            if (_currentQuestionIndex < _questions?.Count)
+            if (questionsList != null && currentQuestionIndex < questionsList.Count)
             {
-                Question question = _questions[_currentQuestionIndex];
-
-                lblQuestion.Text = question.Text;
-                rbChoice1.Text = question.Choices[0];
-                rbChoice2.Text = question.Choices[1];
-                rbChoice3.Text = question.Choices[2];
-                rbChoice4.Text = question.Choices[3];
-                btnCheck.Enabled = true;
-                AnswersEnable(true);
-                _timer.Start();
+                DisplayCurrentQuestion();
+                EnableAnswerButtons(true);
+                timer.Start();
             }
             else
             {
-                _timer.Stop();
-                btnCheck.Enabled = false;
-                btnNext.Enabled = false;
-                lblQuestionsQty.Text = $"Question: {_currentQuestionIndex} / {_questions?.Count}";
-                lblInfo.Text += $"\nTest completed! Your score: {_score}";
+                FinishTest();
             }
+        }
+
+        private void DisplayCurrentQuestion()
+        {
+            Question question = questionsList[currentQuestionIndex];
+
+            lblQuestion.Text = question.Text;
+            rbChoice1.Text = question.Choices[0];
+            rbChoice2.Text = question.Choices[1];
+            rbChoice3.Text = question.Choices[2];
+            rbChoice4.Text = question.Choices[3];
+        }
+
+        private void FinishTest()
+        {
+            timer.Stop();
+            btnCheck.Enabled = false;
+            btnNext.Enabled = false;
+            currentQuestionIndex--;
+            UpdateQuestionsCountLabel();
+            lblInfo.Text += $"Test completed! Your score: {score}";
         }
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-            _timeLeft--;
-            if (_timeLeft == 0)
+            timeLeft--;
+
+            if (timeLeft == 0)
             {
-                _timer.Stop();
+                timer.Stop();
                 lblInfo.Text = "Time's up! Moving to the next question. ";
-                    //$"The correct answer is: {question.Choices[question.CorrectAnswerIndex]}";
-                AnswersEnable(false);
+                EnableAnswerButtons(false);
             }
-            lblTimer.Text = $"Time Left: {_timeLeft}";
+            lblTimer.Text = $"Time Left: {timeLeft}";
         }
 
-        private void AnswersEnable(bool enable)
+        private void EnableAnswerButtons(bool enable)
         {
-            if (enable)
-            {
-                rbChoice1.Enabled = true;
-                rbChoice2.Enabled = true;
-                rbChoice3.Enabled = true;
-                rbChoice4.Enabled = true;
-                btnCheck.Enabled = true;
-            }
-            else
-            {
-                rbChoice1.Enabled = false;
-                rbChoice2.Enabled = false;
-                rbChoice3.Enabled = false;
-                rbChoice4.Enabled = false;
-                btnCheck.Enabled = false;
-            }
+                rbChoice1.Enabled = enable;
+                rbChoice2.Enabled = enable;
+                rbChoice3.Enabled = enable;
+                rbChoice4.Enabled = enable;
+                btnCheck.Enabled = enable;
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
             if (btnCheck.Enabled == false)
             {
-                _timeLeft = 60;
+                timeLeft = 61;
                 lblInfo.Text = "";
-                _currentQuestionIndex++;
+                currentQuestionIndex++;
                 DisplayQuestion();
             }
             else
@@ -141,38 +140,33 @@ namespace Test_Checker
 
         private void btnCheck_Click(object sender, EventArgs e)
         {
-            lblQuestionsQty.Text = $"Question: {_currentQuestionIndex + 1} / {_questions?.Count}";
+            UpdateQuestionsCountLabel();
 
             int selectedAnswerIndex = GetSelectedAnswerIndex();
 
             if (selectedAnswerIndex != -1)
             {
-                Question question = _questions[_currentQuestionIndex];
-                _timer.Stop();
-                AnswersEnable(false);
+                Question question = questionsList?[currentQuestionIndex];
+                timer.Stop();
+                EnableAnswerButtons(false);
 
                 if (question.IsAnswerCorrect(selectedAnswerIndex))
                 {
-                    _score++;
-                    lblScore.Text = $"Score: {_score}";
+                    score++;
+                    lblScore.Text = $"Score: {score}";
                     lblInfo.Text = "Correct!";
                 }
                 else
                 {
-                    lblInfo.Text = $"Incorrect! The correct answer is: \n" +
+                    lblInfo.Text = "Incorrect! The correct answer is: \n" +
                         $"{question.Choices[question.CorrectAnswerIndex]}";
                 }
-                _timeLeft = 60;
+                timeLeft = 60;
             }
             else
             {
                 lblInfo.Text = "Please select answer...";
             }
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 

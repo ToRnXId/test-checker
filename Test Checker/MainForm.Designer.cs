@@ -156,7 +156,6 @@
             btnBack.Name = "btnBack";
             btnBack.Tag = "";
             btnBack.UseVisualStyleBackColor = true;
-            btnBack.Click += btnBack_Click;
             // 
             // MainForm
             // 
